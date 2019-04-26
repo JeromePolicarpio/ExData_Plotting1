@@ -19,7 +19,7 @@ powercons$datetime <- as.POSIXct(powercons$datetime)
 plot(powercons$Sub_metering_1 ~ powercons$datetime, type = "l", ylab = "Energy sub metering", xlab = "")
 lines(powercons$Sub_metering_2 ~ powercons$datetime, col = "Red")
 lines(powercons$Sub_metering_3 ~ powercons$datetime, col = "Blue")
-legend("topright", lty = 1, col = c("black", "red", "blue"), legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
+legend("topright", legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty = 1, col = c("black", "red", "blue"))
 
 # Save the  plot into "plot3.png" image file
 dev.copy(png, file = "plot3.png", height = 480, width = 480)

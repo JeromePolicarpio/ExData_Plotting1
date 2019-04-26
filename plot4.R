@@ -22,10 +22,8 @@ plot(powercons$Voltage ~ powercons$datetime, type = "l", ylab = "Voltage", xlab 
 plot(powercons$Sub_metering_1 ~ powercons$datetime, type = "l", ylab = "Energy sub metering", xlab = "")
 lines(powercons$Sub_metering_2 ~ powercons$datetime, col = "Red")
 lines(powercons$Sub_metering_3 ~ powercons$datetime, col = "Blue")
-legend("topright", lty = 1, col = c("black", "red", "blue"), legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), bty = "n")
-
+legend("topright", lty = 1, col = c("black", "red", "blue"), legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), cex = 0.75, bty = "n")
 plot(powercons$Global_reactive_power ~ powercons$datetime, type = "l", ylab = "Global_reactive_power", xlab = "datetime")
-
 
 # Save the  plot into "plot4.png" image file
 dev.copy(png, file = "plot4.png", height = 480, width = 480)
